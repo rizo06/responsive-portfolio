@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
+
+body {
+   background-color: #000000;
+}
+
+h3 {
+   color: #fff;
+   font-family: 'Qahiri', sans-serif;
+   font-size: 100px;
+   transition: 5s;
+   margin-top: 22rem;
+   margin-left: 39rem;
+   font-weight: 100;
+}
+
+h3::after {
+   font-size: 110px;
+}
+
+a {
+   color: #000;
+   background: #fff;
+   padding: 10px 15px;
+   margin: 750px;
+   border-radius: 5px;
+   text-decoration: none;
+}
