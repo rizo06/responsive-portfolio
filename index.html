@@ -16,18 +16,18 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo">English</a>
-      <div class="toggle"></div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Performance</a></li>
-        <li><a href="#">Contact Us</a></li>
+      <a href="#home" class="logo">English</a>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="menu">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About Us</a></li>
+        <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+        <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+        <li><a href="#performance" onclick="toggleMenu()">Performance</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
       </ul>
     </header>
-    <section class="banner">
+    <section class="banner" id="home">
       <div class="textBx">
         <h2>
           Hello, This is our<br />
@@ -40,7 +40,7 @@
         </button>
       </div>
     </section>
-    <section>
+    <section id="about">
       <div class="heading">
         <h2>About Us</h2>
       </div>
@@ -58,7 +58,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="heading white">
         <h2>Our Services</h2>
         <p>
@@ -86,17 +86,17 @@
             famous
           </p>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Markdown" class="servicesBx">
+        <a href="https://en.wikipedia.org/wiki/Essay" class="servicesBx">
           <img src="icon5.png" alt="ico" />
-          <h2>Writing Documentations</h2>
+          <h2>Writing Essays</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aut
-            impedit praesentium.
+            We can give you essays depending on your level, susceptibility and
+            taste
           </p>
         </a>
       </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
       <div class="heading">
         <h2>Our Pride</h2>
         <p>
@@ -125,7 +125,7 @@
         </div>
       </div>
     </section>
-    <section class="performance">
+    <section class="performance" id="performance">
       <div class="heading">
         <h2>Performance</h2>
         <p>
@@ -157,7 +157,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="heading">
         <h2>Contact Us</h2>
         <p>
@@ -175,9 +175,7 @@
               </div>
               <div class="text">
                 <h3>Address</h3>
-                <a href="https://www.google.com/maps/@41.2795573,69.2684831,17z"
-                  >Nurafshon Street, Shaykhantakhur district</a
-                >
+                <p>Nurafshon Street, Tashkent</p>
               </div>
             </div>
             <div class="box">
@@ -186,7 +184,7 @@
               </div>
               <div class="text">
                 <h3>Phone</h3>
-                <p>+998(97)330-07-47</p>
+                <a>+998(97)330-07-47</a>
               </div>
             </div>
             <div class="box">
@@ -211,19 +209,63 @@
         <div class="formBx">
           <form>
             <h3>Write Us</h3>
-            <input type="text" name="" placeholder="Name" />
+            <!-- <input type="text" name="" placeholder="Name" />
             <input type="email" name="" placeholder="E-Mail" />
-            <textarea placeholder="Type your message here"></textarea>
-            <input type="submit" name="Send" />
+            <textarea placeholder="Type your message here"></textarea> -->
+            <a
+              href="mailto: shoazimoff@gmail.com"
+              target="_blank"
+              class="container"
+            >
+              <div class="coffee-header">
+                <div
+                  class="coffee-header__buttons coffee-header__button-one"
+                ></div>
+                <div
+                  class="coffee-header__buttons coffee-header__button-two"
+                ></div>
+                <div class="coffee-header__display"></div>
+                <div class="coffee-header__details"></div>
+              </div>
+              <div class="coffee-medium">
+                <div class="coffe-medium__exit"></div>
+                <div class="coffee-medium__arm"></div>
+                <div class="coffee-medium__liquid"></div>
+                <div
+                  class="coffee-medium__smoke coffee-medium__smoke-one"
+                ></div>
+                <div
+                  class="coffee-medium__smoke coffee-medium__smoke-two"
+                ></div>
+                <div
+                  class="coffee-medium__smoke coffee-medium__smoke-three"
+                ></div>
+                <div
+                  class="coffee-medium__smoke coffee-medium__smoke-for"
+                ></div>
+                <div class="coffee-medium__cup"></div>
+              </div>
+              <div class="coffee-footer"></div>
+            </a>
           </form>
         </div>
       </div>
     </section>
+    <div class="copyright">
+      <p>By Shoazimov with love <i class="fa fa-heart"></i></p>
+    </div>
     <script type="text/javascript">
       window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
       });
+
+      const toggleMenu = () => {
+        let menuToggle = document.querySelector(".toggle");
+        let menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      };
     </script>
   </body>
 </html>
